@@ -9,10 +9,9 @@
 
 
     {% for bird in names %}
-    <div style="float: left; width: 150px; height: 150px; border: solid">
-        <img src={{ asset('images/' ~ bird.image) }} alt={{ bird.name }} style="width:100%">
-        <div class="container" style="padding: 2px 16px;">
-            
+    <div class="{{ cycle(['green','blue'],loop.index) }}  card">
+        <img src={{ asset('images/' ~ bird.image) }} alt={{ bird.name }} >
+        <div class="container">
             <a href="{{ path('birdDetails', {'id': (loop.index) -1}) }}">{{ bird.name }}</a>
         </div>
     </div>

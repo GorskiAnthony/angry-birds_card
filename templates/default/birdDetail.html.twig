@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Details Bird{% endblock %}
+{% block title %}{{ name }}{% endblock %}
 
 {% block body %}
 
 <h1>{{ name|upper }}</h1>
 
-<div style="width: 150px; height: 150px; border: solid">
+<div style="width: 300px; height: 300px; border: solid">
     <div class="container">
             <img src={{ asset('images/' ~ image) }} alt={{ name }} style="width:100%">
     </div>
