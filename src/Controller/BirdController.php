@@ -105,11 +105,18 @@ class BirdController extends AbstractController
             ],
         ];
 
-        return $this->render('default/birdDetail.html.twig', [
-            'name' => $names[$id]['name'],
-            'description' => $names[$id]['description'],
-            'image' => $names[$id]['image']
-        ]);
+        if(isset($names[$id])) {
+            return $this->render('default/birdDetail.html.twig', [
+                'name' => $names[$id]['name'],
+                'description' => $names[$id]['description'],
+                'image' => $names[$id]['image']
+            ]);
+        } else {
+            // redirects to the "homepage" route
+            return $this->redirectToRoute('home');
+        }
+
+        
 
 
     }
