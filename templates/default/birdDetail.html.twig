@@ -4,8 +4,14 @@
 
 {% block body %}
 
-Bird {{ name }}
-<br>
+<h1>{{ name|upper }}</h1>
+
+<div style="width: 150px; height: 150px; border: solid">
+    <div class="container">
+            <img src={{ asset('images/' ~ image) }} alt={{ name }} style="width:100%">
+    </div>
+</div>
+
 Details : {{ description }}
 
 <hr>

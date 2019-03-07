@@ -3,11 +3,14 @@
 {% block title %}Angry Birds{% endblock %}
 
 {% block body %}
+    <h1>A Field Guide to Angry birds</h1>
+
+    <h3>Games that lodge in the brain often have comical stars </h3>
 
 
     {% for bird in names %}
     <div style="float: left; width: 150px; height: 150px; border: solid">
-        <img src={{ asset('image/' .bird.image) }} alt={{ bird.name }} style="width:100%">
+        <img src={{ asset('images/' ~ bird.image) }} alt={{ bird.name }} style="width:100%">
         <div class="container" style="padding: 2px 16px;">
             
             <a href="{{ path('birdDetails', {'id': (loop.index) -1}) }}">{{ bird.name }}</a>

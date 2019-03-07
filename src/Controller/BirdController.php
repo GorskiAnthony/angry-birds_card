@@ -52,7 +52,7 @@ class BirdController extends AbstractController
             [
                 'name' => 'Big red bird',
                 'description' => 'The big red bird is a flying wrecking bail that causes more damage than his smaller red cousin.',
-                'image' => 'big.png',
+                'image' => 'red-big.png',
             ],
         ];
 
